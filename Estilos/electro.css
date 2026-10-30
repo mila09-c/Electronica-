@@ -9,18 +9,18 @@
 
 /* Elemnt: seccion-genero__titulo */
 .seccion-genero__titulo {
-  font-size: 1.8rem;              
-  margin-top: 0;                  
-  margin-bottom: 15px;            
-  color: #0a004d;                 
+  font-size: 1.8rem;               
+  margin-top: 0;                   
+  margin-bottom: 15px;             
+  color: #0a004d;                  
   font-size: 80px;
   text-align: center;  
-  font-family: comic sans ms, sans-serif;            
+  font-family: comic sans ms, sans-serif;           
 }
 
 /* Elemnt: seccion-genero__subtitulo */
 .seccion-genero__subtitulo{
-  font-size: 1.3rem;               
+  font-size: 1.3rem;                
   margin-top: 25px;
   margin-bottom: 15px;
   color: #0a004d;                  
@@ -40,7 +40,7 @@
   margin: 0;
   display: flex;
   flex-wrap: wrap;                
-  gap: 10px;                      
+  gap: 10px;                     
 }
 
 
@@ -48,9 +48,9 @@
   display: inline-block; 
   background-color: #400153;     
   color: #ffffff;
-  text-decoration: none;           
+  text-decoration: none;            
   padding: 8px 16px;
-  border-radius: 20px;             
+  border-radius: 20px;              
   font-size: 0.9rem;
 }
 
@@ -62,8 +62,8 @@
 .contenido {
   font-family: Arial, Helvetica, sans-serif;
   color: #14003a;                           
-  padding: 20px;                              
-  background-color: #fcfcfc;               
+  padding: 20px;                            
+  background-color: #fcfcfc;                
 }
 
 /* --- TARJETAS DE SUBGÉNEROS --- */
@@ -187,4 +187,64 @@
   font-size: 0.85rem;
   color: #a496ff;
   margin: 0;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* ESTILOS DEL MENÚ LATERAL DESPLEGABLE */
+
+.menu-lateral {
+    position: relative;
+    display: inline-block;
+    margin: 15px 0;
+    background: transparent; /* Eliminamos cualquier rastro de fondo */
+}
+
+/* Botón limpio sin fondos extraños */
+.btn-menu {
+    background-color: #0a004d;
+    color: #ffffff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-menu:hover {
+    background-color: #170e49;
+}
+
+.menu-lateral aside {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background-color: #0d072c;
+    border: 1px solid #231668;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 160px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.menu-lateral aside a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.menu-lateral aside a:hover {
+    background-color: #170e49;
+    color: #a496ff;
+}
+
+.hidden {
+    display: none !important;
 }
