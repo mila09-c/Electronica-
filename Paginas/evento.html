@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/jpg" href="../Imagenes/icon.jpg">
+  <link rel="stylesheet" href="../Estilos/normalize.css">
+  <link rel="stylesheet" href="../Estilos/style.css">
+  <link rel="stylesheet" href="../Estilos/evento.css">
+  <title>Eventos - Oyentes Desvelados</title>
+</head>
+
+<body>
+  <audio autoplay>
+   <source src="../Musica/respite.mp3" type="audio/mpeg">
+  </audio>
+  <!--Enlace a la página principal-->
+  <!-- Titulo de página -->
+  <div class="contenedor-titulo">
+    <img src="../Imagenes/icon.jpg" alt="Icono de Oyentes Desvelados">
+    <h1>OYENTES DESVELADOS</h1>
+  </div>
+
+  <!-- Barra de navegación -->
+  <nav class="menu-lateral">
+    <aside>
+      <a href="../index.html">Inicio</a>
+      <a href="disli.html">Discos/Linea</a>
+      <a href="evento.html">Eventos</a>
+    </aside>
+  </nav>
+
+  <header>
+    <!-- Contenido de la página de eventos -->
+    <h1>Eventos Programados</h1>
+    <p>Información sobre los próximos eventos certificados para nuestros oyentes.</p>
+  </header>
+  <hr>
+  <br>
+  <section class="Proximos__Conciertos">
+    <h3>Próximos Conciertos:</h3>
+    <span>Selecciona una fecha para ver los conciertos programados.</span>
+    <br>
+    <input type="date" id="fechaConcierto">
+    <div id="Proximos__Conciertos__Resultado"></div>
+    <script>
+      const conciertos = [
+        {
+          artista: "Five Seconds of Summer",
+          fecha: "2026-09-09",
+          lugar: "Placio de los Deportes · Ciudad de México, Mexico",
+          imagen: "../Imagenes/5-seconds-of-summer.jpg",
+          genero: "Pop"
+        },
+        {
+          artista: "Scorpions",
+          fecha: "2026-09-10",
+          lugar: "Placio de los Deportes · Ciudad de México, Mexico",
+          imagen: "../Imagenes/scorpions.jpg",
+          genero: "Rock"
+        },
+        {
+          artista: "Camilo",
+          fecha: "2026-09-10",
+          lugar: "Centro de Usos Múltiples (CUM) · Hermosillo, Mexico",
+          imagen: "../Imagenes/camilo.jpg",
+          genero: "Pop/Latino"
+        },
+        {
+          artista: "Humbe",
+          fecha: "2026-09-11",
+          lugar: "World Trade Center Veracruz · Veracruz, Mexico",
+          imagen: "../Imagenes/humbe.jpg",
+          genero: "Latino"
+        },
+        {
+          artista: "aespa",
+          fecha: "2026-09-11",
+          lugar: "Placio de los Deportes · Ciudad de México, Mexico",
+          imagen: "../Imagenes/aespa.jpg",
+          genero: "Soft Rock"
+        },
+        {
+          artista: "ULTRA SUNN",
+          fecha: "2026-09-11",
+          lugar: "C3 Rooftop · Guadalajara, Mexico",
+          imagen: "../Imagenes/default.jpg",
+          genero: "Electronic"
+        },
+        {
+          artista: "Laufey",
+          fecha: "2026-09-12",
+          lugar: "Placio de los Deportes · Ciudad de México, Mexico",
+          imagen: "../Imagenes/laufey.jpg",
+          genero: "Pop"
+        },
+        {
+          artista: "Black Veil Brides",
+          fecha: "2026-09-12",
+          lugar: "Teatro Estudio Cavaret · Zapopan, Mexico",
+          imagen: "../Imagenes/black-veil-brides.jpg",
+          genero: "Hard Rock"
+        },
+        {
+          artista: "Enjambre",
+          fecha: "2026-09-18",
+          lugar: "Auditorio Josefa Ortiz de Domínguez · Querétaro, Mexico",
+          imagen: "../Imagenes/default.jpg",
+          genero: "Latino"
+        },
+        {
+          artista: "Yuridia",
+          fecha: "2026-09-18",
+          lugar: "Estadio Azteca · Ciudad de México, Mexico",
+          imagen: "../Imagenes/yuridia.jpg",
+          genero: "Latino"
+        },
+        {
+          artista: "Alejandra Guzmán",
+          fecha: "2026-09-19",
+          lugar: "Placio de los Deportes · Ciudad de México, Mexico",
+          imagen: "../Imagenes/alejandra-guzman.jpg",
+          genero: "Latino"
+        },
+        {
+          artista: "The Neighbourhood",
+          fecha: "2026-09-21",
+          lugar: "Auditorio Telmex · Zapopan, Mexico",
+          imagen: "../Imagenes/the-neighbourhood.jpg",
+          genero: "Alt Rock"
+        },
+        {
+          artista: "Beach Fossils",
+          fecha: "2026-09-20",
+          lugar: "El Lunario del Auditorio Nacional · Mexico City, Mexico",
+          imagen: "../Imagenes/default.jpg",
+          genero: "Indie Rock"
+        },
+        {
+          artista: "Michael Bublé",
+          fecha: "2026-09-22",
+          lugar: "Estadio Azteca · Ciudad de México, Mexico",
+          imagen: "../Imagenes/michael-buble.jpg",
+          genero: "Pop"
+        },
+        {
+          artista: "Gondwana",
+          fecha: "2026-09-22",
+          lugar: "Placio de los Deportes · Ciudad de México, Mexico",
+          imagen: "../Imagenes/default.jpg",
+          genero: "World Music"
+        },
+        {
+          artista: "Julieta Venegas",
+          fecha: "2026-09-23",
+          lugar: "Coca Cola Auditorium · Merida, Mexico",
+          imagen: "../Imagenes/julieta-venegas.jpg",
+          genero: "Pop"
+        },
+        {
+          artista: "Moenia",
+          fecha: "2026-09-23",
+          lugar: "Placio de los Deportes · Ciudad de México, Mexico",
+          imagen: "../Imagenes/default.jpg",
+          genero: "Electronic"
+        },
+        {
+          artista: "Edén Muñoz",
+          fecha: "2026-09-24",
+          lugar: "Palenque Tijuana · Tijuana, Mexico",
+          imagen: "../Imagenes/default.jpg",
+          genero: "Latino"
+        },
+        {
+          artista: "Stray Kids",
+          fecha: "2026-09-26",
+          lugar: "Estadio GNP Seguros · Mexico City, Mexico",
+          imagen: "../Imagenes/stray-kids.jpg",
+          genero: "Pop Rock"
+        },
+        {
+          artista: "Nataneael Cano",
+          fecha: "2026-09-25",
+          lugar: "Coliseo GNP Seguros · Zapopan, Mexico",
+          imagen: "../Imagenes/default.jpg",
+          genero: "Latino"
+        },
+        {
+          artista: "High on Fire",
+          fecha: "2026-09-27",
+          lugar: "Circo Volador · Mexico City, Mexico",
+          imagen: "../Imagenes/default.jpg",
+          genero: "Rock"
+        }
+      ];
+
+      const input = document.getElementById("fechaConcierto");
+      const resultado = document.getElementById("Proximos__Conciertos__Resultado");
+
+      input.addEventListener("change", () => {
+        const fechaSeleccionada = input.value;
+        const encontrados = conciertos.filter(c => c.fecha === fechaSeleccionada);
+
+        if (encontrados.length === 0) {
+          resultado.innerHTML = "<p>No hay conciertos ese día.</p>";
+          return;
+        }
+
+        resultado.innerHTML = encontrados
+          .map(c => `
+        <div class="tarjeta-concierto">
+            <hr>
+          <img src="${c.imagen}" alt="${c.artista}" width="200">
+          <h3>${c.artista}</h3>
+          <p>${c.lugar}</p>
+          <small>${c.genero}</small>
+          <br>
+        </div>
+      `)
+          .join("");
+      });
+    </script>
+  </section>
+  <br>
+  <hr>
+  <h3>Se el primero en recibir las actualizaciones de nustros eventos:</h3>
+  <form>
+    <div>
+      <label for="nombre">Nombre completo:</label>
+      <br>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre o nickname"></input>
+    </div>
+    <br>
+    <div>
+      <label for="correo">Correo electrónico:</label>
+      <br>
+      <input type="email" id="correo" name="email" placeholder="Tu correo electrónico"></input>
+    </div>
+    <br>
+    <div>
+      <input type="submit" value="Suscribirse">
+    </div>
+  </form>
+  <br>
+  <hr>
+
+  <!-- Pie de página -->
+  <footer class="pie-pagina">
+    <div class="contenido-footer">
+      <h3>Contacto</h3>
+      <p class="subtitulo">Si tienes alguna pregunta o comentario, no dudes en contactarnos:</p>
+
+      <div class="datos-contacto">
+        <p><strong>Correo electrónico:</strong> <a href="mailto:oyedesv098@gmail.com">oyedesv098@gmail.com</a>
+        </p>
+        <p><strong>Teléfono:</strong> <a href="tel:+521234567890">+52 123 456 7890</a></p>
+        <p><strong>Dirección:</strong> Ciudad de México, México</p>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>&copy; 2026 Oyentes Desvelados. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

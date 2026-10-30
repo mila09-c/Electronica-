@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    color: #07013a;
+}
+
+body > hr,
+body > br,
+section > br,
+form br,
+.tarjeta-concierto hr,
+.tarjeta-concierto br {
+    display: none;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 40px 20px;
+    background-color: #000a46;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 36px;
+}
+
+header p {
+    margin: 0;
+    color: #b0e6ff;
+    font-size: 18px;
+}
+
+section {
+    box-sizing: border-box;
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #b0e6ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+section > h3 {
+    margin: 0;
+    color: #07013a;
+    font-size: 28px;
+}
+
+section > span {
+    color: #03016d;
+}
+
+#fechaConcierto {
+    padding: 10px 16px;
+    font-size: 16px;
+    font-family: inherit;
+    color: #03016d;
+    border: 2px solid #6c9fff;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+#fechaConcierto:focus {
+    outline: none;
+    border-color: #03016d;
+}
+
+#Proximos__Conciertos__Resultado {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+#Proximos__Conciertos__Resultado > p {
+    color: #03016d;
+    font-style: italic;
+}
+
+.tarjeta-concierto {
+    flex: 0 1 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 15px;
+    background-color: #000a46;
+    border: 1px solid #b0e6ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.tarjeta-concierto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.tarjeta-concierto h3 {
+    margin: 8px 0 0;
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+
+.tarjeta-concierto p {
+    margin: 0;
+    color: #b0e6ff;
+    font-size: 0.85rem;
+}
+
+.tarjeta-concierto small {
+    margin-top: 6px;
+    padding: 4px 12px;
+    background-color: #6c9fff;
+    color: #03016d;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+body > h3 {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto 0;
+    color: #07013a;
+    text-align: center;
+}
+
+form {
+    box-sizing: border-box;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto 40px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #000a46;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+form label {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+form input[type="text"],
+form input[type="email"] {
+    padding: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 1px solid #b0e6ff;
+    border-radius: 6px;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #6c9fff;
+    color: #03016d;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #ffffff;
+}

@@ -1,0 +1,128 @@
+body,
+body * {
+    font-family: "Arimo", Arial, sans-serif !important;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+.contenedor-titulo,
+.contenedor-titulo * {
+    font-family: "Times New Roman", Times, serif !important;
+}
+
+.contenedor-titulo {
+    background-color: rgb(8, 4, 48);
+}
+
+.contenedor-titulo h1 {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.menu-lateral,
+.menu-lateral * {
+    font-family: "Times New Roman", Times, serif !important;
+}
+
+.menu-lateral {
+    background-color: rgb(110, 163, 255);
+}
+
+.menu-lateral a {
+    color: rgb(20, 20, 130);
+}
+
+.menu-lateral a:hover {
+    color: rgb(20, 20, 130);
+    text-decoration: underline;
+}
+
+h1 {
+    color: rgb(206, 17, 38);
+}
+
+p {
+    color: rgb(40, 40, 40);
+}
+
+a {
+    color: rgb(206, 17, 38);
+}
+
+.cuadricula-subgeneros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.cuadricula-subgeneros__subgenero {
+    text-align: center;
+}
+
+.cuadricula-subgeneros__subgenero h2 {
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    margin: 0 0 10px 0;
+}
+
+.cuadricula-subgeneros__subgenero:nth-child(3n+1) h2 {
+    background-color: rgb(0, 104, 71);
+}
+
+.cuadricula-subgeneros__subgenero:nth-child(3n+2) h2 {
+    background-color: rgb(206, 17, 38);
+}
+
+.cuadricula-subgeneros__subgenero:nth-child(3n+3) h2 {
+    background-color: rgb(0, 104, 71);
+}
+
+.cuadricula-subgeneros__subgenero img {
+    max-width: 100%;
+    height: auto;
+}
+
+.cuadricula-subgeneros__subgenero p {
+    text-align: justify;
+}
+
+@media (max-width: 640px) {
+    .cuadricula-subgeneros {
+        grid-template-columns: 1fr;
+    }
+}
+
+.pie-pagina {
+    background-color: rgb(0, 104, 71);
+    color: rgb(255, 255, 255);
+}
+
+.pie-pagina h3 {
+    color: rgb(255, 255, 255);
+}
+
+.pie-pagina .pie-pagina__subtitulo,
+.pie-pagina p {
+    color: rgb(255, 255, 255);
+}
+
+.pie-pagina__datos-contacto {
+    background-color: rgb(206, 17, 38);
+}
+
+.pie-pagina__datos-contacto a {
+    color: rgb(255, 255, 255);
+}
+
+.pie-pagina__copyright {
+    background-color: rgb(206, 17, 38);
+}
+
+.pie-pagina__copyright p {
+    color: rgb(255, 255, 255);
+}
