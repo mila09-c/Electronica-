@@ -190,16 +190,16 @@
 }
 
 /* ---------------------------------------------------------------------------------------------------- */
-/* ESTILOS DEL MENÚ LATERAL DESPLEGABLE */
+/*MENÚ LATERAL DESPLEGABLE */
 
 .menu-lateral {
     position: relative;
     display: inline-block;
     margin: 15px 0;
-    background: transparent; /* Eliminamos cualquier rastro de fondo */
+    background: transparent;
 }
 
-/* Botón limpio sin fondos extraños */
+
 .btn-menu {
     background-color: #0a004d;
     color: #ffffff;
