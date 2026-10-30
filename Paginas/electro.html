@@ -26,7 +26,10 @@
 
     <!-- Barra de navegación -->
     <nav class="menu-lateral">
-        <aside>
+        <button id="toggle-button" type="button" class="btn-menu">
+          Menú ☰
+        </button>
+        <aside id="hidden-message" class="hidden">
             <a href="../index.html">Inicio</a>
             <a href="disli.html">Discos/Linea</a>
             <a href="evento.html">Eventos</a>
@@ -46,7 +49,7 @@
 
         <!-- Navegación de subgéneros -->
         <h3 class="seccion-genero__subtitulo">Subgéneros de la Electrónica</h3>
-        <nav class="nav-subgeneros">
+        <nav class="nav-subgeneros ">
             <ul>
                 <li><a class="nav-subgeneros__botones" href="#house">House</a></li>
                 <li><a class="nav-subgeneros__botones" href="#techno">Techno</a></li>
@@ -266,6 +269,6 @@
             <p>&copy; 2026 Oyentes Desvelados. Todos los derechos reservados.</p>
         </div>
     </footer>
+      <script src="../Script/electro.js"></script>
 </body>
-
 </html>
